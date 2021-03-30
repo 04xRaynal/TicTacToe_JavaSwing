@@ -50,6 +50,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -139,7 +140,13 @@ public class TicTacToe extends JFrame implements ActionListener{
 	
 	
 	public static void main(String[] args) {
-		new TicTacToe();
+		SwingUtilities.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				new TicTacToe();
+			}
+		});
 	}
 	
 	
