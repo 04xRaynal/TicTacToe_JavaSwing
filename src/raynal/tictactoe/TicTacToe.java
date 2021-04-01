@@ -233,7 +233,6 @@ public class TicTacToe extends JFrame implements ActionListener{
 		northWrapper.add(player1Label, BorderLayout.WEST);  
 		northWrapper.add(flowPanel, BorderLayout.CENTER);
 		northWrapper.add(player2Label, BorderLayout.EAST);  
-		c.add(northWrapper);
 		
 		
 		//bottomLabel displays the score
@@ -262,15 +261,13 @@ public class TicTacToe extends JFrame implements ActionListener{
 		buttonHeight = button.getHeight();
 		
 		if(currentPlayer.playerCharFlag == 'X') {
-			xIcon = xIcon.getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH);
-			button.setIcon(new ImageIcon(xIcon));
+			button.setIcon(new ImageIcon(xIcon.getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH)));
 			button.setDisabledIcon(button.getIcon());
 			button.setEnabled(false);
 			position[(int) button.getClientProperty("position")] = 'X';
 		}
 		else if(currentPlayer.playerCharFlag == 'O') {
-			oIcon = oIcon.getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH);
-			button.setIcon(new ImageIcon(oIcon));
+			button.setIcon(new ImageIcon(oIcon.getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH)));
 			button.setDisabledIcon(button.getIcon());
 			button.setEnabled(false);
 			position[(int) button.getClientProperty("position")] = 'O';
@@ -507,15 +504,13 @@ public class TicTacToe extends JFrame implements ActionListener{
 		JButton button = (JButton) b[compSearchResult];
 		
 		if(currentPlayer.playerCharFlag == 'X') {
-			xIcon = xIcon.getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH);
-			button.setIcon(new ImageIcon(xIcon));
+			button.setIcon(new ImageIcon(xIcon.getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH)));
 			button.setDisabledIcon(b[compSearchResult].getIcon());
 			button.setEnabled(false);
 			position[(int) b[compSearchResult].getClientProperty("position")] = 'X';
 		}
 		else if(currentPlayer.playerCharFlag == 'O') {
-			oIcon = oIcon.getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH);
-			button.setIcon(new ImageIcon(oIcon));
+			button.setIcon(new ImageIcon(oIcon.getScaledInstance(buttonWidth, buttonHeight, Image.SCALE_SMOOTH)));
 			button.setDisabledIcon(b[compSearchResult].getIcon());
 			button.setEnabled(false);
 			position[(int) b[compSearchResult].getClientProperty("position")] = 'O';
