@@ -1,6 +1,9 @@
 # A Classic TicTacToe game using Java Swing.
 ***
+
 ## The user is initially displayed with an option to choose your opponent, either against the computer or a friend.
+ 
+ Project Demo: [Tic Tac Toe](https://replit.com/@MajinVegetaSSJ2/Tic-Tac-Toe?v=1)
  
 ![Capture_ticTacToe_MainMenu](https://github.com/04xRaynal/TicTacToe_JavaSwing/blob/705a2651beee45cd8908febde91c4d6e9598b456/Captured%20Images/Capture_TicTacToe_MainMenu.PNG)
 
